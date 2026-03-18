@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projek STS Genap</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Find'It</h1>
+      <h2>🔍 Student Lost & Found System 🔍</h2>
+    </header>
+
+    <main>
+      <section class="form-card">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nama Barang</label>
+            <input
+              id="inputBarang"
+              type="text"
+              placeholder="Contoh: Botol Minum"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Nama</label>
+            <input
+              id="inputNama"
+              type="text"
+              placeholder="Contoh: Eka Cicurug 3"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Lokasi</label>
+            <input
+              id="inputLokasi"
+              type="text"
+              placeholder="Contoh: Lapangan"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+            <select id="inputStatus">
+              <option value="">Pilih status...</option>
+              <option>Ditemukan</option>
+              <option>Hilang</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Ciri-ciri</label>
+            <input
+              id="inputCiri"
+              type="text"
+              placeholder="Contoh: Biru ada stiker"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Waktu</label>
+            <input id="inputWaktu" type="date" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <button id="submitReport">Kirim Laporan</button>
+
+        <div class="section-label">Semua Laporan</div>
+
+        <input type="text" id="search" placeholder="Cari barang..." />
+
+        <!-- FILTER CHIPS -->
+        <div class="filter-row">
+          <button class="filter-chip active" onclick="filterData('semua', this)">Semua</button>
+          <button class="filter-chip" onclick="filterData('Ditemukan', this)">Ditemukan</button>
+          <button class="filter-chip" onclick="filterData('Hilang', this)">Hilang</button>
+        </div>
+
+        <div id="laporan"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
