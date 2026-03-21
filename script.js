@@ -155,7 +155,6 @@ function resetForm() {
 
 // SAVE KE LOCAL STORAGE
 function saveToLocalStorage() {
-  console.log(reports);
   localStorage.setItem("reports", JSON.stringify(reports));
 }
 
